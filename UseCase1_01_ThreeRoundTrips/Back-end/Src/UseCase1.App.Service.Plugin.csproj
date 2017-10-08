@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49BD7852-2E1A-4A76-AC54-5339ABE3F36F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UseCase1.App.Service.Plugin</RootNamespace>
+    <AssemblyName>UseCase1.App.Service.Plugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(MSBuildProjectDirectory)\..\Bin\Debug\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(OutputPath)Revenj.Http.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(MSBuildProjectDirectory)\..\Bin\Release\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(OutputPath)Revenj.Http.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql, Version=3.2.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\..\Common\Packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.3.2.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\..\Common\Packages\protobuf-net.2.3.2\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Core.Interface, Version=1.4.1.0, Culture=neutral, PublicKeyToken=dea4f62beafbd724, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Revenj\Postgres\Revenj.Core.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Processing.Interface, Version=1.0.1.0, Culture=neutral, PublicKeyToken=dea4f62beafbd724, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Revenj\Postgres\Revenj.Processing.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Common\Packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UseCase1.DSL.Postgres">
+      <HintPath>..\Lib\Revenj\UseCase1.DSL.Postgres.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="ServerCommand\BaseServerCommand.cs" />
+    <Compile Include="ServerCommand\LoadSubmission.cs" />
+    <Compile Include="ServerCommand\SaveSubmission.cs" />
+    <Compile Include="ServerCommand\DeleteAllAndInsertDemoData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Src\AcmeCorp.Common\AcmeCorp.Common.csproj">
+      <Project>{43778EBE-AF44-455D-975F-417AB183BB1E}</Project>
+      <Name>AcmeCorp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Src\App.Common\UseCase1.App.Common.csproj">
+      <Project>{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}</Project>
+      <Name>UseCase1.App.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(TargetDir)..\..\..\Lib\Revenj\Postgres\*.dll" "$(TargetDir)" /d /y
+xcopy "$(TargetDir)..\..\..\Lib\Revenj\Postgres\*.pdb" "$(TargetDir)" /d /y
+xcopy "$(TargetDir)..\..\..\Lib\Revenj\Postgres\*.exe" "$(TargetDir)" /d /y
+xcopy "$(TargetDir)..\..\..\Lib\Revenj\Postgres\*.config" "$(TargetDir)" /d /y</PreBuildEvent>
+  </PropertyGroup>
+</Project>
