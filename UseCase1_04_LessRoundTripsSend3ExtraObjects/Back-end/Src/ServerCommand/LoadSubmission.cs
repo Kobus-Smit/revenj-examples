@@ -16,8 +16,12 @@ namespace UseCase1.App.Service.Plugin.ServerCommand
         {
             var submission = context.Find<Submission>(submissionURI);
             //TODO Would be nice if I could do something like: 
-            //var submission = context.Find<Submission>(submissionURI).Preload();
-            //TODO ...then I won't need the next three lines
+            //var submission = context.Find<Submission>(submissionURI).Preload(); //to preload all
+			//or specify the preload/prefetch path 
+			//similiar to LLBLGen Pro
+			//https://www.llblgen.com/Documentation/5.2/LLBLGen%20Pro%20RTF/Using%20the%20generated%20code/Adapter/gencode_prefetchpaths_adapter.htm
+			//https://github.com/SolutionsDesign/LLBLGen.Linq.Prefetch
+            //...then I won't need the next three lines
             var customer = context.Find<Customer>(submission.CustomerURI);
             var form = context.Find<Form>(submission.FormURI);
             var group = context.Find<FormGroup>(form.GroupURI);
