@@ -1,6 +1,6 @@
 # revenj-examples
 
-This repo contains some C# WinForms, Visual Studio 2017, PostgreSQL 9.6 demo/example apps that I wrote while learning the cool [DSL Platform](https://dsl-platform.com/) / [Revenj](https://github.com/ngs-doo/revenj) and while having questions for the Revenj team.
+This repo contains some C# WinForms, Visual Studio 2017, PostgreSQL 9.6 demo/example apps that I wrote while learning the cool [DSL Platform](https://dsl-platform.com/) / [Revenj](https://github.com/ngs-doo/revenj) and while having questions (see [#89](https://github.com/ngs-doo/revenj/issues/89)) for the Revenj team.
 
 # Use case 1
 
@@ -30,9 +30,30 @@ A possible concern is that the Client need to do 3 more [round trips](https://gi
 This version uses a snowflake and does need to do those 3 roundtrips.
 But the problem is then my ["Save"](https://github.com/Kobus-Smit/revenj-examples/blob/faee70e6c90fade6b377bd2e4e94073f182c8f16/UseCase1_02_LessRoundTripsButSnowFlakeIsReadOnly/Back-end/Src/ServerCommand/SaveSubmission.cs#L23) Server command does not work because snowflakes are readonly. 
 
+
 ## UseCase1_03_LessRoundTripsUsingSharedObject
 
 This also do not need those 3 roundtrips and it can save changes back to the database. It uses a snowflake and also an writable POCO object shared between the client and the service. But it does require more boilerplate code and AutoMapper.
+
+
+## UseCase1_04_LessRoundTripsSend3ExtraObjects
+
+This case is very similiar to UseCase1_01_ThreeRoundTrips but it adds 3 extra parameters and does not need roundtrips then. The tuple parameter does not look very neat...
+
+
+## UseCase1_05_LessRoundTripsWithReadWriteSnowFlake
+
+This one works nice, less boilerplate code compared to UseCase1_04_LessRoundTripsSend3ExtraObjects. But it required me to modify the source code that Revenj generates, removing internal from the setters to create mutable snowflakes. See [comment-335050682](https://github.com/ngs-doo/revenj/issues/89#issuecomment-335050682)
+
+
+## UseCase1_06_LessRoundTripsWithReadWriteSnowFlakeAndWithoutDataTables
+
+This WIP tries to get rid of the DataTables and uses IDomainModel (see [comment-335018469](https://github.com/ngs-doo/revenj/issues/89#issuecomment-335018469))
+
+## UseCase1_07_LessRoundTripsWithReadWriteReports
+
+This is the best solution so far with the least boilerplate code. It uses the report concept as suggested by @zapov so it "preloads/prefetches". However, same problem than UseCase1_05_LessRoundTripsWithReadWriteSnowFlake, because reports are not mutable. I've modified the Revenj generate source code and added a [DataMember](https://github.com/Kobus-Smit/revenj-examples/blob/13560da7f15eedc60a6eb39302f2c3d95ae619ab/UseCase1_07_LessRoundTripsWithReadWriteReports/TempTest/DOTNET_CLIENT/global__UseCase1.Submission.cs#L180
+) attribute and then it worked fine.
 
 ## Requirement/Specifications:
 
@@ -40,6 +61,7 @@ This also do not need those 3 roundtrips and it can save changes back to the dat
 - A Form has a user defined list of Input Entries and Output Entries
 - A Form belongs to a FormGroup
 - The Customer's Inputs and Outputs of a Submission must be stored in a database table in a schema per Form.
+
 
 ### Application DSL:
 
@@ -94,6 +116,7 @@ module UseCase1  {
 
   guid aggregate Customer {
     string Name;
+	string Email;
     int RegistrationNumber { unique; }
     detail<Submission.Customer> Submissions; 
   }
@@ -103,6 +126,8 @@ module UseCase1  {
     Form *Form;
     string Comments;
     timestamp Date { versioning; }
+    Binary InputsBytes;
+    Binary OutputBytes;
   }
 
   snowflake<Submission> SubmissionList {
@@ -113,21 +138,12 @@ module UseCase1  {
     order by Customer;
   }
 
-
-  snowflake<Submission> SelectedSubmission {
-    Customer.Name as Customer;
-    Form.Name as Form;
-    Form.Schema as Schema;
-    Form.Inputs as FormInputs;
-    Form.Group.Name as Group;
-    Comments;
-    Date;
-
-    specification Where 'it =>  it.URI == uri' {
-      string uri;
-    }
+  report SelectedSubmission {
+    string uri;
+	Submission Submission 'it => it.URI == uri';
   }
 }
+
 ```
 
 ### Example of user defined dynamically generated Form DSL:
