@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UseCase1.DSL.Postgres</RootNamespace>
+    <AssemblyName>UseCase1.DSL.Postgres</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Remotion.Linq">
+      <HintPath>..\..\Back-end\Lib\Revenj\Postgres\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Core">
+      <HintPath>..\..\Back-end\Lib\Revenj\Postgres\Revenj.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Revenj.Core.Interface">
+      <HintPath>..\..\Back-end\Lib\Revenj\Postgres\Revenj.Core.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="DatabaseRepositoryFormABC.InputRepository.cs" />
+    <Compile Include="DatabaseRepositoryFormABC.OutputRepository.cs" />
+    <Compile Include="DatabaseRepositoryFormXYZ.InputRepository.cs" />
+    <Compile Include="DatabaseRepositoryFormXYZ.OutputRepository.cs" />
+    <Compile Include="DatabaseRepositoryUseCase1.CustomerRepository.cs" />
+    <Compile Include="DatabaseRepositoryUseCase1.FormGroupRepository.cs" />
+    <Compile Include="DatabaseRepositoryUseCase1.FormListRepository.cs" />
+    <Compile Include="DatabaseRepositoryUseCase1.FormRepository.cs" />
+    <Compile Include="DatabaseRepositoryUseCase1.SubmissionListRepository.cs" />
+    <Compile Include="DatabaseRepositoryUseCase1.SubmissionRepository.cs" />
+    <Compile Include="global__FormABC.Input.cs" />
+    <Compile Include="global__FormABC.Output.cs" />
+    <Compile Include="global__FormXYZ.Input.cs" />
+    <Compile Include="global__FormXYZ.Output.cs" />
+    <Compile Include="global__UseCase1.Customer.cs" />
+    <Compile Include="global__UseCase1.DataType.cs" />
+    <Compile Include="global__UseCase1.Entry.cs" />
+    <Compile Include="global__UseCase1.Form.cs" />
+    <Compile Include="global__UseCase1.FormGroup.cs" />
+    <Compile Include="global__UseCase1.FormList.cs" />
+    <Compile Include="global__UseCase1.FormStatus.cs" />
+    <Compile Include="global__UseCase1.SelectedSubmission+Result.cs" />
+    <Compile Include="global__UseCase1.SelectedSubmission+_SubmissionSpecification_.cs" />
+    <Compile Include="global__UseCase1.SelectedSubmission.cs" />
+    <Compile Include="global__UseCase1.Submission.cs" />
+    <Compile Include="global__UseCase1.SubmissionList.cs" />
+    <Compile Include="SystemBoot.Configuration.cs" />
+    <Compile Include="_DatabaseCommon.cs" />
+    <Compile Include="_DatabaseCommon.FactoryFormABC_Input.InputConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryFormABC_Output.OutputConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryFormXYZ_Input.InputConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryFormXYZ_Output.OutputConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_Customer.CustomerConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_DataType.DataTypeConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_Entry.EntryConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_Form.FormConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_FormGroup.FormGroupConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_FormList.FormListConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_FormStatus.FormStatusConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_Submission.SubmissionConverter.cs" />
+    <Compile Include="_DatabaseCommon.FactoryUseCase1_SubmissionList.SubmissionListConverter.cs" />
+    <Compile Include="_DatabaseConfiguration.DatabaseConverters.cs" />
+    <Compile Include="__NGSHelpers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)Back-end\Lib\Revenj</PostBuildEvent>
+  </PropertyGroup>
+</Project>

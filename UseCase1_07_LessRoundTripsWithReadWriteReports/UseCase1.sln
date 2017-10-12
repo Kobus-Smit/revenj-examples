@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCase1.App.WinForms", "Front-end\Src\UseCase1.App.WinForms.csproj", "{0B68C862-C9AA-45D3-AD15-9724DE3146C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Front-end", "Front-end", "{D7E84CAB-E6E0-4289-90BB-951573E8B404}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back-end", "Back-end", "{6DF694B5-1785-4DFA-9E1C-2087DDBB5285}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{44A1427D-9C7E-4794-B4C1-42826FECA6CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCase1.DSL", "Common\Src\DSL\UseCase1.DSL.csproj", "{8E5F1A25-878B-4EDA-B053-CA8BB140726E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCase1.App.Service.Plugin", "Back-end\Src\UseCase1.App.Service.Plugin.csproj", "{49BD7852-2E1A-4A76-AC54-5339ABE3F36F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCase1.App.Common", "Common\Src\App.Common\UseCase1.App.Common.csproj", "{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCorp.Common.WinForms", "Common\Src\AcmeCorp.Common.WinForms\AcmeCorp.Common.WinForms.csproj", "{CC9D16E7-D302-4704-B1C7-FC530572D34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCorp.Common", "Common\Src\AcmeCorp.Common\AcmeCorp.Common.csproj", "{43778EBE-AF44-455D-975F-417AB183BB1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TempTest", "TempTest", "{5298FC95-EF9F-4860-9FE7-ABE1C4B8DFD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCase1.DSL.Client", "TempTest\DOTNET_CLIENT\UseCase1.DSL.Client.csproj", "{5480E7F0-369C-4795-AC3D-C1F7C1B6A099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCase1.DSL.Postgres", "TempTest\REVENJ_NET\UseCase1.DSL.Postgres.csproj", "{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B68C862-C9AA-45D3-AD15-9724DE3146C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B68C862-C9AA-45D3-AD15-9724DE3146C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B68C862-C9AA-45D3-AD15-9724DE3146C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B68C862-C9AA-45D3-AD15-9724DE3146C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E5F1A25-878B-4EDA-B053-CA8BB140726E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5F1A25-878B-4EDA-B053-CA8BB140726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5F1A25-878B-4EDA-B053-CA8BB140726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5F1A25-878B-4EDA-B053-CA8BB140726E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BD7852-2E1A-4A76-AC54-5339ABE3F36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BD7852-2E1A-4A76-AC54-5339ABE3F36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BD7852-2E1A-4A76-AC54-5339ABE3F36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BD7852-2E1A-4A76-AC54-5339ABE3F36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9D16E7-D302-4704-B1C7-FC530572D34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9D16E7-D302-4704-B1C7-FC530572D34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9D16E7-D302-4704-B1C7-FC530572D34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9D16E7-D302-4704-B1C7-FC530572D34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43778EBE-AF44-455D-975F-417AB183BB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43778EBE-AF44-455D-975F-417AB183BB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43778EBE-AF44-455D-975F-417AB183BB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43778EBE-AF44-455D-975F-417AB183BB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5480E7F0-369C-4795-AC3D-C1F7C1B6A099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5480E7F0-369C-4795-AC3D-C1F7C1B6A099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5480E7F0-369C-4795-AC3D-C1F7C1B6A099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5480E7F0-369C-4795-AC3D-C1F7C1B6A099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B68C862-C9AA-45D3-AD15-9724DE3146C4} = {D7E84CAB-E6E0-4289-90BB-951573E8B404}
+		{49BD7852-2E1A-4A76-AC54-5339ABE3F36F} = {6DF694B5-1785-4DFA-9E1C-2087DDBB5285}
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D} = {44A1427D-9C7E-4794-B4C1-42826FECA6CF}
+		{CC9D16E7-D302-4704-B1C7-FC530572D34D} = {44A1427D-9C7E-4794-B4C1-42826FECA6CF}
+		{43778EBE-AF44-455D-975F-417AB183BB1E} = {44A1427D-9C7E-4794-B4C1-42826FECA6CF}
+		{5480E7F0-369C-4795-AC3D-C1F7C1B6A099} = {5298FC95-EF9F-4860-9FE7-ABE1C4B8DFD9}
+		{381C0AC2-50EF-49DF-9E8B-94D86BD1F4D5} = {5298FC95-EF9F-4860-9FE7-ABE1C4B8DFD9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A73D498-E14E-4294-8399-C75382D7510D}
+	EndGlobalSection
+	GlobalSection(DslPlatformSolutionProperties) = preSolution
+		Postgres.ConnectionString = server=localhost;port=5432;database=UseCase1;user=postgres;password=postgres;encoding=unicode
+		Postgres.SqlScriptsPath = Back-end\Database\Migration
+		Postgres.ConfirmUnsafe = True
+		Postgres.ApplyMigration = True
+		Postgres.CompileMigration = True
+		Client.Name = UseCase1.DSL.Client
+		Client.Target = Front-end\Lib\Revenj
+		Client.Dependencies = Front-end\Lib\Revenj\Client
+		Client.UseUtc = True
+		Php.Name = Php
+		Php.Target = Php
+		Wpf.Name = RatingSystem.Client.Model.WPF
+		Wpf.Target = Front-end\Lib\
+		Wpf.Dependencies = Front-end\Lib\Revenj\WPF
+		Postgres.Name = UseCase1.DSL.Postgres
+		Postgres.Target = Back-end\Lib\Revenj
+		Postgres.Dependencies = Back-end\Lib\Revenj\Postgres
+		Postgres.UseUtc = True
+		Postgres.MinimalSerialization = True
+		Postgres.NoPrepareExecute = True
+	EndGlobalSection
+EndGlobal
