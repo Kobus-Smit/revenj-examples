@@ -2,7 +2,10 @@
 
 This repo contains some C# WinForms, Visual Studio 2017, PostgreSQL 9.6 demo/example apps that I wrote while learning the cool [DSL Platform](https://dsl-platform.com/) / [Revenj](https://github.com/ngs-doo/revenj) and while having questions (see [#89](https://github.com/ngs-doo/revenj/issues/89)) for the Revenj team.
 
-# Use case 1
+## [Runnable Revenj tutorial example](https://github.com/Kobus-Smit/revenj-examples/tree/master/RevenjTutorial1)
+A runnable example of the first basic Revenj tutorial found at https://github.com/ngs-doo/revenj/blob/master/tutorials/revenj-tutorial-setup.md
+
+## Use case 1
 
 - Use case 1 is an example of loading and saving aggregates, using snowflakes, specifications, server commands etc.
 I like how quick it is to evolve the model and that there's not a lot of boilerplate code to maintain.
