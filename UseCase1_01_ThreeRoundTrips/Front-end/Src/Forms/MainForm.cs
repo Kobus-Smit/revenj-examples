@@ -1,5 +1,6 @@
 ﻿using System;
 using AcmeCorp.Common.WinForms;
+using CryptocoinTracking;
 using UseCase1.App.WinForms.Classes;
 
 namespace UseCase1.App.WinForms.Forms
@@ -37,6 +38,17 @@ namespace UseCase1.App.WinForms.Forms
         {
             if (OpenSubmissionForm.Select(out var submissionID))
                 EditSubmissionForm.Edit(submissionID);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.ConnectToService();
+            var cur = new Currency { Code = "ETH", Name = "Ethereum", Type = CurrencyType.Crypto }.Create();
         }
     }
 }

@@ -4,20 +4,21 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E5F1A25-878B-4EDA-B053-CA8BB140726E}</ProjectGuid>
+    <ProjectGuid>{F32A68A9-D17D-479E-A47A-DAFBE2B4F266}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UseCase1.DSL</RootNamespace>
-    <AssemblyName>UseCase1.DSL</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <RootNamespace>RevenjTutorial1</RootNamespace>
+    <AssemblyName>RevenjTutorial1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <OutputPath>$(MSBuildProjectDirectory)\bin\Debug\</OutputPath>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(OutputPath)Revenj.Http.exe</StartProgram>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,7 +26,9 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <OutputPath>$(MSBuildProjectDirectory)\bin\Release\</OutputPath>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(OutputPath)Revenj.Http.exe</StartProgram>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,17 +40,18 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DSL\CryptocoinTracking.dsl" />
-    <None Include="DSL\UseCase1.dsl" />
-    <None Include="DSL\User-defined\FormXYZ.dsl" />
-    <None Include="DSL\User-defined\FormABC.dsl" />
+    <None Include="tutorial.dsl" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(SolutionDir)dependencies\Postgres\*.*" "$(TargetDir)" /d /y
+xcopy "$(SolutionDir)lib\*.*" "$(TargetDir)" /d /y</PreBuildEvent>
+  </PropertyGroup>
 </Project>
