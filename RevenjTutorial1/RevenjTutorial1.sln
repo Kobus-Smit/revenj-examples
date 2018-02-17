@@ -28,7 +28,7 @@ Global
 		SolutionGuid = {371BF45F-A44B-41EC-BAEE-5B9440CF477C}
 	EndGlobalSection
 	GlobalSection(DslPlatformSolutionProperties) = preSolution
-		Postgres.ConnectionString = server=localhost;port=5432;database=RevenjTutorial;user=postgres;password=postgres;encoding=unicode
+		Postgres.ConnectionString = server=localhost;port=5432;database=revenjtutorial1;user=postgres;password=postgres;encoding=unicode
 		Postgres.SqlScriptsPath = scripts
 		Postgres.ConfirmUnsafe = True
 		Postgres.ApplyMigration = True
