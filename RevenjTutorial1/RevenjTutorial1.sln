@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevenjTutorial1", "RevenjTutorial1\RevenjTutorial1.csproj", "{F32A68A9-D17D-479E-A47A-DAFBE2B4F266}"
 EndProject
@@ -33,9 +33,23 @@ Global
 		Postgres.ConfirmUnsafe = True
 		Postgres.ApplyMigration = True
 		Postgres.CompileMigration = True
+		Poco.Name = Sigma.DSL.Common
+		Poco.Target = Common\Lib\Revenj
+		Poco.Dependencies = Common\Lib\Revenj\POCO
+		Poco.UseUtc = True
+		Client.Name = Sigma.DSL.Client
+		Client.Target = Front-end\Lib\Revenj
+		Client.Dependencies = Front-end\Lib\Revenj\Client
+		Client.UseUtc = True
 		Php.Name = Php
-		Php.Target = Php		
+		Php.Target = Php
+		Wpf.Name = Sigma.Client.Model.WPF
+		Wpf.Target = Front-end\Lib\
+		Wpf.Dependencies = Front-end\Lib\Revenj\WPF
 		Postgres.Compile = True
+		Postgres.Name = Sigma.DSL.Postgres
+		Postgres.Target = Lib\Revenj
+		Postgres.Dependencies = Lib\Revenj\Postgres
 		Postgres.UseUtc = True
 		Postgres.MinimalSerialization = True
 		Postgres.NoPrepareExecute = True
