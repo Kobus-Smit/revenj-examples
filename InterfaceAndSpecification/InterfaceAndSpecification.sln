@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTest", "Source\InterfaceTest.csproj", "{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B06AB9-E5AF-4F9F-8C50-BD291E88CB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A73D498-E14E-4294-8399-C75382D7510D}
+	EndGlobalSection
+	GlobalSection(DslPlatformSolutionProperties) = preSolution
+		Postgres.ConnectionString = server=localhost;port=5432;database=InterfaceTest;user=postgres;password=postgres;encoding=unicode
+		Postgres.SqlScriptsPath = SQL
+		Postgres.ConfirmUnsafe = True
+		Postgres.ApplyMigration = True
+		Postgres.CompileMigration = True
+		Poco.Name = InterfaceTest.DSL.POCO
+		Poco.Target = Common\Lib\Revenj
+		Poco.Dependencies = Common\Lib\Revenj\POCO
+		Poco.UseUtc = True
+		Client.Name = InterfaceTest.DSL.Client
+		Client.Target = Front-end\Lib\Revenj
+		Client.Dependencies = Front-end\Lib\Revenj\Client
+		Client.UseUtc = True
+		Php.Name = Php
+		Php.Target = Php
+		Wpf.Name = SimpleMapping.Client.WPF
+		Wpf.Target = Front-end\Lib\
+		Wpf.Dependencies = Front-end\Lib\Revenj\WPF
+		Postgres.Compile = True
+		Postgres.Name = InterfaceTest.DSL
+		Postgres.Target = Target
+		Postgres.Dependencies = Dependency
+		Postgres.UseUtc = True
+		Postgres.MinimalSerialization = True
+		Postgres.NoPrepareExecute = True
+	EndGlobalSection
+EndGlobal
