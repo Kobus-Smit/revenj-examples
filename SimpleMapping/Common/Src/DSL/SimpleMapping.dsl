@@ -2,6 +2,7 @@
 
 root Person {
 	string Name;
+	Gender Gender;
 }
 
 struct PersonVM {
@@ -14,6 +15,11 @@ struct CommonParam
 {
 	PersonVM Person;
 	bool Other1;
+}
+
+enum Gender {
+	Male;
+	Female;
 }
 
 mapping ToVM { identical; }  

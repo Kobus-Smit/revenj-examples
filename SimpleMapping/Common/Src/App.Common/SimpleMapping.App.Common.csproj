@@ -31,14 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Model">
+      <HintPath>..\..\Lib\Revenj\Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="protobuf-net, Version=2.3.2.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\protobuf-net.2.3.2\lib\net40\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net-data, Version=2.0.7.668, Culture=neutral, PublicKeyToken=3a92fdc8f425ccde, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\protobuf-net-data.2.0.7.668\lib\net45\protobuf-net-data.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleMapping.DSL.POCO">
-      <HintPath>..\..\Lib\Revenj\SimpleMapping.DSL.POCO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

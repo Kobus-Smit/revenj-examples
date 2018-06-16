@@ -47,12 +47,12 @@ Global
 		Postgres.ApplyMigration = True
 		Postgres.CompileMigration = True
 		Poco.Compile = True
-		Poco.Name = SimpleMapping.DSL.POCO
+		Poco.Name = Model
 		Poco.Target = Common\Lib\Revenj
 		Poco.Dependencies = Common\Lib\Revenj\POCO
 		Poco.UseUtc = True
 		Client.Compile = True
-		Client.Name = SimpleMapping.DSL.Client
+		Client.Name = Model
 		Client.Target = Front-end\Lib\Revenj
 		Client.Dependencies = Front-end\Lib\Revenj\Client
 		Client.UseUtc = True
@@ -62,7 +62,7 @@ Global
 		Wpf.Target = Front-end\Lib\
 		Wpf.Dependencies = Front-end\Lib\Revenj\WPF
 		Postgres.Compile = True
-		Postgres.Name = SimpleMapping.DSL.Postgres
+		Postgres.Name = Model
 		Postgres.Target = Back-end\Lib\Revenj
 		Postgres.Dependencies = Back-end\Lib\Revenj\Postgres
 		Postgres.UseUtc = True

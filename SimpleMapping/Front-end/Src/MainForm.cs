@@ -21,7 +21,7 @@ namespace SimpleMapping.App.WinForms
             var cp = new CommonParam { Person = new PersonVM { Name = "Aaaa" }, Other1 = true };
             var result = standardProxy.Execute<CommonParam, string>("SimpleMapping.App.Service.Plugin.TestCommonParameter", cp).Result;
 
-            var person = new Person { Name = "Bbbb" }.Create();
+            var person = new Person { Name = "Bbbb" , Gender = Gender.Male }.Create();
             
             //How do I get this working?
             Common.Test.Abc(person);
