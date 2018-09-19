@@ -30,7 +30,7 @@
         {
             this.testButton = new System.Windows.Forms.Button();
             this.resultsTextBox = new System.Windows.Forms.TextBox();
-            this.mbTextBox = new System.Windows.Forms.TextBox();
+            this.kbTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.commentTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,22 +58,22 @@
             this.resultsTextBox.Size = new System.Drawing.Size(641, 484);
             this.resultsTextBox.TabIndex = 1;
             // 
-            // mbTextBox
+            // kbTextBox
             // 
-            this.mbTextBox.Location = new System.Drawing.Point(75, 12);
-            this.mbTextBox.Name = "mbTextBox";
-            this.mbTextBox.Size = new System.Drawing.Size(35, 20);
-            this.mbTextBox.TabIndex = 2;
-            this.mbTextBox.Text = "10";
+            this.kbTextBox.Location = new System.Drawing.Point(75, 12);
+            this.kbTextBox.Name = "kbTextBox";
+            this.kbTextBox.Size = new System.Drawing.Size(51, 20);
+            this.kbTextBox.TabIndex = 2;
+            this.kbTextBox.Text = "10";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Size in MB";
+            this.label1.Text = "Size in KB";
             // 
             // commentTextBox
             // 
@@ -102,7 +102,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.commentTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.mbTextBox);
+            this.Controls.Add(this.kbTextBox);
             this.Controls.Add(this.resultsTextBox);
             this.Controls.Add(this.testButton);
             this.Name = "MainForm";
@@ -116,7 +116,7 @@
 
         private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.TextBox resultsTextBox;
-        private System.Windows.Forms.TextBox mbTextBox;
+        private System.Windows.Forms.TextBox kbTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox commentTextBox;
         private System.Windows.Forms.Label label2;

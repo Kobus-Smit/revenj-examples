@@ -4,27 +4,6 @@
         <name>Revenj.Processing.Interface</name>
     </assembly>
     <members>
-        <member name="T:Revenj.Processing.ICommandResultDescription`1">
-            <summary>
-            Executed command result paired with request id.
-            </summary>
-            <typeparam name="TFormat">result format</typeparam>
-        </member>
-        <member name="P:Revenj.Processing.ICommandResultDescription`1.RequestID">
-            <summary>
-            Request id from command description
-            </summary>
-        </member>
-        <member name="P:Revenj.Processing.ICommandResultDescription`1.Result">
-            <summary>
-            Execution result from server command
-            </summary>
-        </member>
-        <member name="P:Revenj.Processing.ICommandResultDescription`1.Duration">
-            <summary>
-            Total elapsed milliseconds.
-            </summary>
-        </member>
         <member name="T:Revenj.Processing.IProcessingResult`1">
             <summary>
             Commands execution result.
@@ -52,43 +31,47 @@
             Total elapsed milliseconds.
             </summary>
         </member>
-        <member name="T:Revenj.Processing.IProcessingEngine">
+        <member name="T:Revenj.Processing.ICommandResultDescription`1">
             <summary>
-            Service for processing server commands.
-            Server commands are loaded from description information.
-            Commands are executed and result is transformed to requested output type.
+            Executed command result paired with request id.
+            </summary>
+            <typeparam name="TFormat">result format</typeparam>
+        </member>
+        <member name="P:Revenj.Processing.ICommandResultDescription`1.RequestID">
+            <summary>
+            Request id from command description
             </summary>
         </member>
-        <member name="M:Revenj.Processing.IProcessingEngine.Execute``2(Revenj.Processing.IServerCommandDescription{``0}[],System.Security.Principal.IPrincipal)">
+        <member name="P:Revenj.Processing.ICommandResultDescription`1.Result">
             <summary>
-            Execute server commands.
-            Command arguments are defined with input format type.
-            Result is expected in specified output format type.
-            Commands are executed in a single transaction.
-            </summary>
-            <typeparam name="TInput">command argument type</typeparam>
-            <typeparam name="TOutput">executed result type</typeparam>
-            <param name="commands">commands description</param>
-            <param name="principal">security context</param>
-            <returns>aggregated execution result</returns>
-        </member>
-        <member name="T:Revenj.Processing.ProcessingEngineHelper">
-            <summary>
-            Utility class for processing engine
+            Execution result from server command
             </summary>
         </member>
-        <member name="M:Revenj.Processing.ProcessingEngineHelper.Execute``2(Revenj.Processing.IProcessingEngine,Revenj.Processing.IServerCommandDescription{``0}[])">
+        <member name="P:Revenj.Processing.ICommandResultDescription`1.Duration">
             <summary>
-            Execute API with commands through params arguments. Thread bounded principal will be passed.
-            Command arguments are defined with input format type.
-            Result is expected in specified output format type.
-            Commands are executed in a single transaction.
+            Total elapsed milliseconds.
             </summary>
-            <typeparam name="TInput">command argument type</typeparam>
-            <typeparam name="TOutput">executed result type</typeparam>
-            <param name="engine">processing engine</param>
-            <param name="commands">commands description</param>
-            <returns>aggregated execution result</returns>
+        </member>
+        <member name="T:Revenj.Processing.IServerCommandDescription`1">
+            <summary>
+            Server command description in specified format.
+            </summary>
+            <typeparam name="TFormat">input argument format</typeparam>
+        </member>
+        <member name="P:Revenj.Processing.IServerCommandDescription`1.RequestID">
+            <summary>
+            Request id used for pairing result with request.
+            </summary>
+        </member>
+        <member name="P:Revenj.Processing.IServerCommandDescription`1.CommandType">
+            <summary>
+            Resolved command type from command name.
+            </summary>
+        </member>
+        <member name="P:Revenj.Processing.IServerCommandDescription`1.Data">
+            <summary>
+            Command argument.
+            </summary>
         </member>
         <member name="T:Revenj.Processing.ICommandResult`1">
             <summary>
@@ -143,26 +126,43 @@
             This is used as optimization, since transaction scope is created only when at least one command requires transaction.
             </summary>
         </member>
-        <member name="T:Revenj.Processing.IServerCommandDescription`1">
+        <member name="T:Revenj.Processing.IProcessingEngine">
             <summary>
-            Server command description in specified format.
-            </summary>
-            <typeparam name="TFormat">input argument format</typeparam>
-        </member>
-        <member name="P:Revenj.Processing.IServerCommandDescription`1.RequestID">
-            <summary>
-            Request id used for pairing result with request.
+            Service for processing server commands.
+            Server commands are loaded from description information.
+            Commands are executed and result is transformed to requested output type.
             </summary>
         </member>
-        <member name="P:Revenj.Processing.IServerCommandDescription`1.CommandType">
+        <member name="M:Revenj.Processing.IProcessingEngine.Execute``2(Revenj.Processing.IServerCommandDescription{``0}[],System.Security.Principal.IPrincipal)">
             <summary>
-            Resolved command type from command name.
+            Execute server commands.
+            Command arguments are defined with input format type.
+            Result is expected in specified output format type.
+            Commands are executed in a single transaction.
+            </summary>
+            <typeparam name="TInput">command argument type</typeparam>
+            <typeparam name="TOutput">executed result type</typeparam>
+            <param name="commands">commands description</param>
+            <param name="principal">security context</param>
+            <returns>aggregated execution result</returns>
+        </member>
+        <member name="T:Revenj.Processing.ProcessingEngineHelper">
+            <summary>
+            Utility class for processing engine
             </summary>
         </member>
-        <member name="P:Revenj.Processing.IServerCommandDescription`1.Data">
+        <member name="M:Revenj.Processing.ProcessingEngineHelper.Execute``2(Revenj.Processing.IProcessingEngine,Revenj.Processing.IServerCommandDescription{``0}[])">
             <summary>
-            Command argument.
+            Execute API with commands through params arguments. Thread bounded principal will be passed.
+            Command arguments are defined with input format type.
+            Result is expected in specified output format type.
+            Commands are executed in a single transaction.
             </summary>
+            <typeparam name="TInput">command argument type</typeparam>
+            <typeparam name="TOutput">executed result type</typeparam>
+            <param name="engine">processing engine</param>
+            <param name="commands">commands description</param>
+            <returns>aggregated execution result</returns>
         </member>
         <member name="T:Revenj.Processing.IServerService`2">
             <summary>

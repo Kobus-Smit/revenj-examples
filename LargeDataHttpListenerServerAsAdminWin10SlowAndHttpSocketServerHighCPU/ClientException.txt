@@ -1,0 +1,142 @@
+See the end of this message for details on invoking 
+just-in-time (JIT) debugging instead of this dialog box.
+
+************** Exception Text **************
+System.AggregateException: One or more errors occurred. ---> System.AggregateException: One or more errors occurred. ---> System.Net.WebException: Internal Server Error
+   at Revenj.HttpClient.ExecuteRequest(HttpStatusCode[] expectedStatus, HttpWebRequest request, Int32 retryCount)
+   at Revenj.HttpClient.<>c__DisplayClass3`1.<Call>b__2()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Revenj.HttpClient.<Call>b__1[TArgument,TResult](Task`1 it)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at SimpleMapping.App.WinForms.MainForm.testButton_Click(Object sender, EventArgs e) in D:\Dev\OpenSource\revenj-examples\LargeDataHttpListenerServerAsAdminWin10SlowAndHttpSocketServerHighCPU\Front-end\Src\MainForm.cs:line 27
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: Internal Server Error
+   at Revenj.HttpClient.ExecuteRequest(HttpStatusCode[] expectedStatus, HttpWebRequest request, Int32 retryCount)
+   at Revenj.HttpClient.<>c__DisplayClass3`1.<Call>b__2()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Revenj.HttpClient.<Call>b__1[TArgument,TResult](Task`1 it)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+---> (Inner Exception #0) System.Net.WebException: Internal Server Error
+   at Revenj.HttpClient.ExecuteRequest(HttpStatusCode[] expectedStatus, HttpWebRequest request, Int32 retryCount)
+   at Revenj.HttpClient.<>c__DisplayClass3`1.<Call>b__2()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()<---
+<---
+
+
+
+************** Loaded Assemblies **************
+mscorlib
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3131.0 built by: NET472REL1LAST
+    CodeBase: file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll
+----------------------------------------
+SimpleMapping.App.WinForms
+    Assembly Version: 1.0.0.0
+    Win32 Version: 1.0.0.0
+    CodeBase: file:///D:/Dev/OpenSource/revenj-examples/LargeDataHttpListenerServerAsAdminWin10SlowAndHttpSocketServerHighCPU/Front-end/Bin/Debug/SimpleMapping.App.WinForms.exe
+----------------------------------------
+System.Windows.Forms
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3056.0 built by: NET472REL1
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll
+----------------------------------------
+System
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3056.0 built by: NET472REL1
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+System.Drawing
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3056.0 built by: NET472REL1
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
+----------------------------------------
+System.Configuration
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3056.0 built by: NET472REL1
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll
+----------------------------------------
+System.Core
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3110.0 built by: NET472REL1LAST_C
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll
+----------------------------------------
+System.Xml
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3056.0 built by: NET472REL1
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll
+----------------------------------------
+Revenj.Client
+    Assembly Version: 1.0.0.23890
+    Win32 Version: 1.0.0.0
+    CodeBase: file:///D:/Dev/OpenSource/revenj-examples/LargeDataHttpListenerServerAsAdminWin10SlowAndHttpSocketServerHighCPU/Front-end/Bin/Debug/Revenj.Client.DLL
+----------------------------------------
+Model
+    Assembly Version: 2018.9.19.1959
+    Win32 Version: 2018.9.19.1959
+    CodeBase: file:///D:/Dev/OpenSource/revenj-examples/LargeDataHttpListenerServerAsAdminWin10SlowAndHttpSocketServerHighCPU/Front-end/Bin/Debug/Model.DLL
+----------------------------------------
+protobuf-net
+    Assembly Version: 2.4.0.0
+    Win32 Version: 2.4.0.8641
+    CodeBase: file:///D:/Dev/OpenSource/revenj-examples/LargeDataHttpListenerServerAsAdminWin10SlowAndHttpSocketServerHighCPU/Front-end/Bin/Debug/protobuf-net.DLL
+----------------------------------------
+Anonymously Hosted DynamicMethods Assembly
+    Assembly Version: 0.0.0.0
+    Win32 Version: 4.7.3131.0 built by: NET472REL1LAST
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_32/mscorlib/v4.0_4.0.0.0__b77a5c561934e089/mscorlib.dll
+----------------------------------------
+LitS3
+    Assembly Version: 1.0.1.0
+    Win32 Version: 1.0.1.0
+    CodeBase: file:///D:/Dev/OpenSource/revenj-examples/LargeDataHttpListenerServerAsAdminWin10SlowAndHttpSocketServerHighCPU/Front-end/Bin/Debug/LitS3.DLL
+----------------------------------------
+System.Runtime.Serialization
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3131.0 built by: NET472REL1LAST
+    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Runtime.Serialization/v4.0_4.0.0.0__b77a5c561934e089/System.Runtime.Serialization.dll
+----------------------------------------
+
+************** JIT Debugging **************
+To enable just-in-time (JIT) debugging, the .config file for this
+application or computer (machine.config) must have the
+jitDebugging value set in the system.windows.forms section.
+The application must also be compiled with debugging
+enabled.
+
+For example:
+
+<configuration>
+    <system.windows.forms jitDebugging="true" />
+</configuration>
+
+When JIT debugging is enabled, any unhandled exception
+will be sent to the JIT debugger registered on the computer
+rather than be handled by this dialog box.
+
+
