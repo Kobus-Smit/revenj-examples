@@ -227,7 +227,7 @@
             Contains basic HTTP information
             </summary>
         </member>
-        <member name="M:Revenj.Api.IRequestContext.GetHeader(System.String)">
+        <member name="M:Revenj.Api.IRequestContext.GetHeaderLowercase(System.String)">
             <summary>
             Read custom header.
             Returns null if not found.
