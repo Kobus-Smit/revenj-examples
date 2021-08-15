@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetTutorial", "AspNetTutorialLite\AspNetTutorial.csproj", "{655978ED-F98F-4549-9115-A213A9D89979}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "AspNetTutorialLiteClient\ConsoleApp1.csproj", "{F83CA7A7-D9DC-4B2D-822E-055D2CD2E030}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{655978ED-F98F-4549-9115-A213A9D89979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655978ED-F98F-4549-9115-A213A9D89979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655978ED-F98F-4549-9115-A213A9D89979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655978ED-F98F-4549-9115-A213A9D89979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83CA7A7-D9DC-4B2D-822E-055D2CD2E030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83CA7A7-D9DC-4B2D-822E-055D2CD2E030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83CA7A7-D9DC-4B2D-822E-055D2CD2E030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83CA7A7-D9DC-4B2D-822E-055D2CD2E030}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B65FB1E-469F-4C34-84FA-9202D11C7F8A}
+	EndGlobalSection
+	GlobalSection(DslPlatformSolutionProperties) = preSolution
+		Postgres.ConnectionString = server=localhost;database=tutorial2;user=revenj;password=revenj
+		Postgres.ApplyMigration = True
+		Postgres.CompileMigration = True
+		Client.Compile = True
+		Client.Name = Model
+		Client.Target = AspNetTutorialLiteClient\lib
+		Client.Dependencies = AspNetTutorialLiteClient\dependencies\Client
+		Client.ActiveRecord = False
+		Client.HelperMethods = False
+		Client.UseUtc = True
+		Postgres.Compile = True
+		Postgres.BuildType = DotNetStandard
+		Postgres.Name = Model
+		Postgres.Target = AspNetTutorialLite\lib
+		Postgres.Dependencies = 
+	EndGlobalSection
+EndGlobal
