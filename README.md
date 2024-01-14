@@ -1,3 +1,7 @@
+
+Run after checkout:
+git submodule update --init --recursive
+
 # revenj-examples
 
 This repo contains some C# WinForms, Visual Studio 2017, PostgreSQL 9.6 demo/example apps that I wrote while learning the cool [DSL Platform](https://dsl-platform.com/) / [Revenj](https://github.com/ngs-doo/revenj) and while having questions (see [#89](https://github.com/ngs-doo/revenj/issues/89)) for the Revenj team.
@@ -15,23 +19,23 @@ I like how quick it is to evolve the model and that there's not a lot of boilerp
 ### Instructions
 1. Run [RecreateDatabase.bat](https://github.com/Kobus-Smit/revenj-examples/blob/master/UseCase1_01_ThreeRoundTrips/Back-end/Database/_RecreateDatabase.bat) to create the Postgres database and the required schemas/tables/etc.
 
-2. Run the solution to launch the HTTP Server and the client app 
+2. Run the solution to launch the HTTP Server and the client app
 
 3. Click the "Create Demo Data" button to insert some demo data
 
 4. Click the "Open Submission" button, open any entry, enter some data in the Inputs grid and Save.
 
-## UseCase1_01_ThreeRoundTrips 
+## UseCase1_01_ThreeRoundTrips
 
 This version calls a "Load" Server Command that returns an updateable aggregate.
 A possible concern is that the Client need to do 3 more [round trips](https://github.com/Kobus-Smit/revenj-examples/blob/faee70e6c90fade6b377bd2e4e94073f182c8f16/UseCase1_01_ThreeRoundTrips/Front-end/Src/Forms/EditSubmissionForm.cs#L25
-) to display all the required information: 
+) to display all the required information:
 
 
-## UseCase1_02_LessRoundTripsButSnowFlakeIsReadOnly 
+## UseCase1_02_LessRoundTripsButSnowFlakeIsReadOnly
 
 This version uses a snowflake and does need to do those 3 roundtrips.
-But the problem is then my ["Save"](https://github.com/Kobus-Smit/revenj-examples/blob/faee70e6c90fade6b377bd2e4e94073f182c8f16/UseCase1_02_LessRoundTripsButSnowFlakeIsReadOnly/Back-end/Src/ServerCommand/SaveSubmission.cs#L23) Server command does not work because snowflakes are readonly. 
+But the problem is then my ["Save"](https://github.com/Kobus-Smit/revenj-examples/blob/faee70e6c90fade6b377bd2e4e94073f182c8f16/UseCase1_02_LessRoundTripsButSnowFlakeIsReadOnly/Back-end/Src/ServerCommand/SaveSubmission.cs#L23) Server command does not work because snowflakes are readonly.
 
 
 ## UseCase1_03_LessRoundTripsUsingSharedObject
@@ -73,7 +77,7 @@ module UseCase1  {
 
   guid aggregate FormGroup {
     string Name { unique; }
-    detail<Form.Group> Forms; 
+    detail<Form.Group> Forms;
   }
 
   guid aggregate Form {
@@ -83,7 +87,7 @@ module UseCase1  {
     FormStatus Status;
     List<Entry> Inputs;
     List<Entry> Outputs;
-    detail<Submission.Form> Submissions; 
+    detail<Submission.Form> Submissions;
     calculated int SubmissionsCount from 'm => m.Submissions.Count()';
   }
 
@@ -98,7 +102,7 @@ module UseCase1  {
   value Entry {
     string Description;
     string ColumnName;
-    DataType DataType;  
+    DataType DataType;
   }
 
   enum DataType {
@@ -121,7 +125,7 @@ module UseCase1  {
     string Name;
 	string Email;
     int RegistrationNumber { unique; }
-    detail<Submission.Customer> Submissions; 
+    detail<Submission.Customer> Submissions;
   }
 
   guid aggregate Submission {
