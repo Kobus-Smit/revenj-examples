@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetTutorial", "AspNetTutorial.csproj", "{AB65D119-222D-4C9A-85DF-47E99E397F19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Revenj", "Revenj", "{982818C5-F99A-451D-A693-FBE77AC41B07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CFC2AED8-DCD1-4E47-B803-C4A224253E8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{F9865E5D-8DAF-4CE8-94EE-BAD24C84B9AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{723AD9B8-573F-430D-936D-97D2EA0D7A6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Core.Interface.NetStandard", "..\..\revenj\csharp\Core\Revenj.Core.Interface\Revenj.Core.Interface.NetStandard.csproj", "{E434A933-3178-43F3-939C-9274C4EE62A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Core.NetStandard", "..\..\revenj\csharp\Core\Revenj.Core\Revenj.Core.NetStandard.csproj", "{3AB99830-4F42-443F-B0EB-BFADECD64A1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.Aspects.NetStandard", "..\..\revenj\csharp\Plugins\Revenj.Plugins.Aspects\Revenj.Plugins.Aspects.NetStandard.csproj", "{ACBA32C5-E84F-40CB-A1DC-604804B28C38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.AspNetCore.Commands", "..\..\revenj\csharp\Plugins\Revenj.Plugins.AspNetCore.Commands\Revenj.Plugins.AspNetCore.Commands.csproj", "{74350B74-23A6-49A7-9574-E36D59DADB6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Processing.Interface.NetStandard", "..\..\revenj\csharp\Server\Revenj.Processing.Interface\Revenj.Processing.Interface.NetStandard.csproj", "{E241FBB4-B519-4EA9-8329-3ED32CC77782}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.AspNetCore", "..\..\revenj\csharp\Server\Revenj.AspNetCore\Revenj.AspNetCore.csproj", "{AD5D82F4-3003-4465-9172-A8816BF52693}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.Server.Commands.NetStandard", "..\..\revenj\csharp\Plugins\Revenj.Plugins.Server.Commands\Revenj.Plugins.Server.Commands.NetStandard.csproj", "{8CD37B88-D432-4D1D-9274-FEDC92DD423F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Processing.NetStandard", "..\..\revenj\csharp\Server\Revenj.Processing\Revenj.Processing.NetStandard.csproj", "{58E92158-EF25-4271-9767-02CD8DBD94D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB65D119-222D-4C9A-85DF-47E99E397F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB65D119-222D-4C9A-85DF-47E99E397F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB65D119-222D-4C9A-85DF-47E99E397F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB65D119-222D-4C9A-85DF-47E99E397F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E434A933-3178-43F3-939C-9274C4EE62A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E434A933-3178-43F3-939C-9274C4EE62A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E434A933-3178-43F3-939C-9274C4EE62A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E434A933-3178-43F3-939C-9274C4EE62A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB99830-4F42-443F-B0EB-BFADECD64A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB99830-4F42-443F-B0EB-BFADECD64A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB99830-4F42-443F-B0EB-BFADECD64A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB99830-4F42-443F-B0EB-BFADECD64A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACBA32C5-E84F-40CB-A1DC-604804B28C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBA32C5-E84F-40CB-A1DC-604804B28C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBA32C5-E84F-40CB-A1DC-604804B28C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBA32C5-E84F-40CB-A1DC-604804B28C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74350B74-23A6-49A7-9574-E36D59DADB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74350B74-23A6-49A7-9574-E36D59DADB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74350B74-23A6-49A7-9574-E36D59DADB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74350B74-23A6-49A7-9574-E36D59DADB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E241FBB4-B519-4EA9-8329-3ED32CC77782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E241FBB4-B519-4EA9-8329-3ED32CC77782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E241FBB4-B519-4EA9-8329-3ED32CC77782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E241FBB4-B519-4EA9-8329-3ED32CC77782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5D82F4-3003-4465-9172-A8816BF52693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5D82F4-3003-4465-9172-A8816BF52693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5D82F4-3003-4465-9172-A8816BF52693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5D82F4-3003-4465-9172-A8816BF52693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD37B88-D432-4D1D-9274-FEDC92DD423F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD37B88-D432-4D1D-9274-FEDC92DD423F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD37B88-D432-4D1D-9274-FEDC92DD423F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD37B88-D432-4D1D-9274-FEDC92DD423F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E92158-EF25-4271-9767-02CD8DBD94D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E92158-EF25-4271-9767-02CD8DBD94D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E92158-EF25-4271-9767-02CD8DBD94D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E92158-EF25-4271-9767-02CD8DBD94D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFC2AED8-DCD1-4E47-B803-C4A224253E8E} = {982818C5-F99A-451D-A693-FBE77AC41B07}
+		{F9865E5D-8DAF-4CE8-94EE-BAD24C84B9AA} = {982818C5-F99A-451D-A693-FBE77AC41B07}
+		{723AD9B8-573F-430D-936D-97D2EA0D7A6A} = {982818C5-F99A-451D-A693-FBE77AC41B07}
+		{E434A933-3178-43F3-939C-9274C4EE62A5} = {CFC2AED8-DCD1-4E47-B803-C4A224253E8E}
+		{3AB99830-4F42-443F-B0EB-BFADECD64A1F} = {CFC2AED8-DCD1-4E47-B803-C4A224253E8E}
+		{ACBA32C5-E84F-40CB-A1DC-604804B28C38} = {F9865E5D-8DAF-4CE8-94EE-BAD24C84B9AA}
+		{74350B74-23A6-49A7-9574-E36D59DADB6F} = {F9865E5D-8DAF-4CE8-94EE-BAD24C84B9AA}
+		{E241FBB4-B519-4EA9-8329-3ED32CC77782} = {723AD9B8-573F-430D-936D-97D2EA0D7A6A}
+		{AD5D82F4-3003-4465-9172-A8816BF52693} = {723AD9B8-573F-430D-936D-97D2EA0D7A6A}
+		{8CD37B88-D432-4D1D-9274-FEDC92DD423F} = {F9865E5D-8DAF-4CE8-94EE-BAD24C84B9AA}
+		{58E92158-EF25-4271-9767-02CD8DBD94D9} = {723AD9B8-573F-430D-936D-97D2EA0D7A6A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28345340-2DF8-42E6-86E9-D01F657CB104}
+	EndGlobalSection
+	GlobalSection(DslPlatformSolutionProperties) = preSolution
+		Postgres.ConnectionString = server=localhost;database=tutorial2;user=postgres;password=postgres
+		Postgres.SqlScriptsPath = SQL
+		Postgres.ApplyMigration = True
+		Postgres.CompileMigration = True
+		Postgres.Compile = True
+		Postgres.BuildType = DotNetStandard
+		Postgres.Name = Model
+		Postgres.Target = Lib
+		Postgres.Dependencies = 
+		Postgres.Nugets = revenj:1.6.3; :
+		Postgres.UseUtc = True
+		Postgres.NoPrepareExecute = True
+	EndGlobalSection
+EndGlobal
