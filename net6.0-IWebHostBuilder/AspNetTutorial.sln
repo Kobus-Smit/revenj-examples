@@ -13,21 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{F986
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{723AD9B8-573F-430D-936D-97D2EA0D7A6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Core.Interface.NetStandard", "..\..\revenj\csharp\Core\Revenj.Core.Interface\Revenj.Core.Interface.NetStandard.csproj", "{E434A933-3178-43F3-939C-9274C4EE62A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Core.Interface.NetStandard", "..\revenj\csharp\Core\Revenj.Core.Interface\Revenj.Core.Interface.NetStandard.csproj", "{E434A933-3178-43F3-939C-9274C4EE62A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Core.NetStandard", "..\..\revenj\csharp\Core\Revenj.Core\Revenj.Core.NetStandard.csproj", "{3AB99830-4F42-443F-B0EB-BFADECD64A1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Core.NetStandard", "..\revenj\csharp\Core\Revenj.Core\Revenj.Core.NetStandard.csproj", "{3AB99830-4F42-443F-B0EB-BFADECD64A1F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.Aspects.NetStandard", "..\..\revenj\csharp\Plugins\Revenj.Plugins.Aspects\Revenj.Plugins.Aspects.NetStandard.csproj", "{ACBA32C5-E84F-40CB-A1DC-604804B28C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.Aspects.NetStandard", "..\revenj\csharp\Plugins\Revenj.Plugins.Aspects\Revenj.Plugins.Aspects.NetStandard.csproj", "{ACBA32C5-E84F-40CB-A1DC-604804B28C38}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.AspNetCore.Commands", "..\..\revenj\csharp\Plugins\Revenj.Plugins.AspNetCore.Commands\Revenj.Plugins.AspNetCore.Commands.csproj", "{74350B74-23A6-49A7-9574-E36D59DADB6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.AspNetCore.Commands", "..\revenj\csharp\Plugins\Revenj.Plugins.AspNetCore.Commands\Revenj.Plugins.AspNetCore.Commands.csproj", "{74350B74-23A6-49A7-9574-E36D59DADB6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Processing.Interface.NetStandard", "..\..\revenj\csharp\Server\Revenj.Processing.Interface\Revenj.Processing.Interface.NetStandard.csproj", "{E241FBB4-B519-4EA9-8329-3ED32CC77782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Processing.Interface.NetStandard", "..\revenj\csharp\Server\Revenj.Processing.Interface\Revenj.Processing.Interface.NetStandard.csproj", "{E241FBB4-B519-4EA9-8329-3ED32CC77782}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.AspNetCore", "..\..\revenj\csharp\Server\Revenj.AspNetCore\Revenj.AspNetCore.csproj", "{AD5D82F4-3003-4465-9172-A8816BF52693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.AspNetCore", "..\revenj\csharp\Server\Revenj.AspNetCore\Revenj.AspNetCore.csproj", "{AD5D82F4-3003-4465-9172-A8816BF52693}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.Server.Commands.NetStandard", "..\..\revenj\csharp\Plugins\Revenj.Plugins.Server.Commands\Revenj.Plugins.Server.Commands.NetStandard.csproj", "{8CD37B88-D432-4D1D-9274-FEDC92DD423F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Plugins.Server.Commands.NetStandard", "..\revenj\csharp\Plugins\Revenj.Plugins.Server.Commands\Revenj.Plugins.Server.Commands.NetStandard.csproj", "{8CD37B88-D432-4D1D-9274-FEDC92DD423F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Processing.NetStandard", "..\..\revenj\csharp\Server\Revenj.Processing\Revenj.Processing.NetStandard.csproj", "{58E92158-EF25-4271-9767-02CD8DBD94D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revenj.Processing.NetStandard", "..\revenj\csharp\Server\Revenj.Processing\Revenj.Processing.NetStandard.csproj", "{58E92158-EF25-4271-9767-02CD8DBD94D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

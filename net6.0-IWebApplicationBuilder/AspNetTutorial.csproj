@@ -10,8 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\revenj\csharp\Plugins\Revenj.Plugins.AspNetCore.Commands\Revenj.Plugins.AspNetCore.Commands.csproj" />
-    <ProjectReference Include="..\..\revenj\csharp\Server\Revenj.AspNetCore\Revenj.AspNetCore.csproj" />
+    <ProjectReference Include="..\revenj\csharp\Plugins\Revenj.Plugins.AspNetCore.Commands\Revenj.Plugins.AspNetCore.Commands.csproj" />
   </ItemGroup>
 
   <ItemGroup>
